@@ -17,7 +17,7 @@
             background-color: #f4f6f9;
             color: #222;
             line-height: 1.8;
-            padding-top: 60px; /* مساحة للشريط الثابت بأعلى الصفحة */
+            padding-top: 60px;
         }
 
         /* شريط الاتصال الثابت بأعلى الصفحة باللون الأصفر */
@@ -112,7 +112,7 @@
             border-radius: 2px;
         }
         
-        /* شبكة الأقسام الضخمة (أكثر من 10 أقسام متكاملة للمقاولات) */
+        /* شبكة الأقسام الضخمة */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -151,7 +151,7 @@
             text-align: justify;
         }
 
-        /* تصميم زر الواتساب العائم على اليسار ليطابق التطبيق تماماً مع اهتزاز مخصص */
+        /* تصميم زر الواتساب العائم على اليسار مع اهتزاز يشبه التطبيق الحقيقي */
         @keyframes whatsapp-shake {
             0% { transform: translate(0, 0) rotate(0deg); }
             15% { transform: translate(-3px, 3px) rotate(-8deg); }
@@ -173,7 +173,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
+            font-size: 42px;
             box-shadow: 0 6px 25px rgba(0,0,0,0.4);
             z-index: 9999;
             text-decoration: none;
@@ -181,6 +181,29 @@
             transition: transform 0.2s;
         }
         .float-whatsapp:hover {
+            transform: scale(1.15);
+        }
+
+        /* تصميم زر الاتصال العائم على اليمين تماماً كما طلبت */
+        .float-call {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 75px;
+            height: 75px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+            z-index: 9999;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .float-call:hover {
             transform: scale(1.15);
         }
 
@@ -197,7 +220,7 @@
 </head>
 <body>
 
-    <!-- شريط اتصال ثابت بأعلى الصفحة باللون الأصفر تماماً كما طلبت -->
+    <!-- شريط اتصال ثابت بأعلى الصفحة باللون الأصفر -->
     <div class="top-fixed-bar">
         <span>📞 اتصل الآن بخدمة العملاء المباشرة: 0569962482</span>
         <a href="tel:0569962482">اتصل الآن</a>
@@ -326,9 +349,14 @@
         </div>
     </div>
 
-    <!-- زر الواتساب العائم على اليسار ليطابق التطبيق تماماً مع الاهتزاز -->
+    <!-- زر الواتساب العائم على اليسار مع الاهتزاز -->
     <a href="https://wa.me/966569962482?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20خدمات%20مؤسسة%20الفخامة%20للمقاولات" class="float-whatsapp" target="_blank" title="تواصل عبر الواتساب مباشرة">
         💬
+    </a>
+
+    <!-- زر الاتصال العائم على اليمين تماماً كما طلبت -->
+    <a href="tel:0569962482" class="float-call" title="اتصال هاتفي مباشر">
+        📞
     </a>
 
     <footer>
